@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<title>拼图</title>
+		<script src="js/flexible.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/puzzleGame_object.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/puz.css" />
+	</head>
+
+	<body>
+		<main id="wrap">
+			<div id="right">
+				<div id="imgArea"></div>
+				<!--成功遮罩层-->
+				<div id="win-game">
+					<img src="images/nice.png" />
+					<h2>您在游戏拼图中，成功还原拼图，您获得<span id="youdian"></span>个优点，已经攒到您的小金库账户中</h2>
+				</div>
+				<!--失败遮罩层-->
+				<div id="lost-game">
+					<img src="images/again.png" />
+					<h2>很遗憾，您在游戏拼图中，差一点就还原拼图，点击开始游戏再来一局吧</h2>
+				</div>
+				<!--已经完过的遮罩层-->
+				<div id="play-done">
+					您今天限玩次数已经用完，点击右下角图片去看下商城里有没有想要的宝贝吧
+				</div>
+				<!--用户未登录-->
+				<div id="unLogin">
+					您还未登录，请先登录。
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+			<div id="left">
+				<ul class="game-state">
+					<li id="start"><span></span></li>
+					<li id="timer">
+						<div>
+							<div class="time-block">0</div>
+							<div id="min" class="time-block">0</div>
+						</div>
+						:
+						<div>
+							<div id="second1" class="time-block">1</div>
+							<div id="second2" class="time-block">0</div>
+						</div>
+					</li>
+					<li id="level">
+						<select name="choice" id="choice">
+							<option value="50">3x3</option>
+							<option value="100">4x4</option>
+							<option value="200">5x5</option>
+						</select>
+					</li>
+				</ul>
+				<div class="game-rule">
+					<ul>
+						<li>
+							<h2>游戏规则</h2>
+						</li>
+						<li>1、每局游戏消耗20个优点</li>
+						<li>2、点击开始游戏，打乱图片</li>
+						<li>3、交换图片位置，复原图片</li>
+						<li>4、限时拼图成功，赚优点（3X3 50个优点 4X4 100个优点 5X5 200个优点）</li>
+						<li>5、每日限玩10次</li>
+						<div style="clear: both;"></div>
+					</ul>
+					<div class="preview">
+						<img id="reference-img" />
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</main>
+	</body>
+
+
+</html>

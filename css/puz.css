@@ -1,0 +1,185 @@
+		@charset "utf-8";
+		* {
+			padding: 0;
+			margin: 0;
+			touch-action: none;
+		}
+		
+		li {
+			list-style: none;
+		}
+		/*预加载的图片*/
+		.prestrain{
+			visibility: hidden;
+			width: 0;
+			height: 0;
+		}
+		#wrap {
+			width: 9.6rem;
+			padding: 0.2rem;
+		}
+		
+		#wrap #right {
+			position: relative;
+			width: 9.2rem;
+			padding: 0.2rem;
+			background: url(../images/puz-bg.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		
+		#wrap #right #imgArea {
+			width: 9.2rem;
+			height: 9.2rem;
+			position: relative;
+		}
+		
+		#wrap #right #imgArea div.imgCell {
+			float: left;
+			border: 1px solid #fff;
+			border-radius: 4px;
+			position: absolute;
+			z-index: 10;
+			box-shadow: 0px 0px 8px #fff;
+			transition-property: background-position;
+			transition-duration: 300ms;
+			transition-timing-function: ease-in-out;
+		}
+		
+		#start {
+			width: 40%;
+			height: 1.1rem;
+			background: url(../images/start-btn.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		
+
+		#timer {
+			width: 35%;
+			height: 1.3rem;
+			padding: 0.1rem 0 0 0.7rem;
+			box-sizing: border-box;
+		}
+		
+		#timer div {
+			display: inline-block;
+		}
+		
+		.time-block {
+			background: url(../images/time-block.png) no-repeat;
+			background-size: 100% 100%;
+			width: 0.35rem;
+			height: 0.5rem;
+			display: inline-block;
+			text-align: center;
+			line-height: 0.5rem;
+			margin-top: 0.2rem;
+			color: white;
+			font-weight: 900;
+			font-size: 0.4rem;
+		}
+		
+		.game-state li {
+			float: left;
+		}
+
+		select {
+			margin-top: 0.15rem;
+			padding: 0 0.6rem 0 0.6rem;
+			appearance: none;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			background: url("../images/arrow.png") no-repeat scroll 1.6rem center transparent;
+			background-size: 0.5rem 0.3rem;
+			width: 2.4rem;
+			height: 0.8rem;
+			background-color: #f19149;
+		}
+
+		select::-ms-expand {
+			display: none;
+		}
+		select {
+			font-size: 0.5rem;
+			font-weight: 600;
+		}
+		.game-rule {
+			float: left;
+		}
+		
+		.game-rule ul {
+			width: 65%;
+			text-overflow: clip;
+			display: inline-block;
+		}
+		
+		.game-rule ul li {
+			color: #7a7a7a;
+			font-size: 0.3rem;
+			margin-left: 0.2rem;
+			line-height:0.6rem;
+		}
+		
+		.game-rule ul h2 {
+			color: #333333;
+			font-size: 0.45rem;
+			font-weight: 200;
+			margin-bottom: 0.1rem;
+		}
+		
+		.preview {
+			width: 35%;
+			float: right;
+		}
+		
+		.preview img {
+			width: 100%;
+		}
+		
+		#win-game,
+		#lost-game{
+			width: 9.2rem;
+			height: 9.2rem;
+			position: absolute;
+			left: calc(50% - 8.66/2rem);
+			top: 0.3rem;
+			z-index: 50;
+			text-align: center;
+			background-color: rgba(0, 0, 0, 0.7);
+			visibility: hidden;
+		}
+		
+		#win-game img,
+		#lost-game img {
+			width: 60%;
+			vertical-align: middle;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+		
+		#win-game h2,
+		#lost-game h2 {
+			position: relative;
+			color: #eeeeee;
+			width: 70%;
+			left: 15%;
+			font-size: 0.3rem;
+			line-height: 0.6rem;
+			letter-spacing: 0.1rem;
+		}
+		#play-done,#unLogin{
+		    width: 89%;
+		    height: 50px;
+		     display: none; 
+		    overflow: hidden;
+		    position: absolute;
+		    left: 0;
+		    bottom: 0;
+		    z-index: 50;
+		    padding: 12px 13px;
+		    /* word-break: break-all; */
+		    background-color: rgba(0,0,0,.7);
+		    color: #eeeeee;
+		    margin: 5px;
+		    border-radius: 5px;
+		    font-size: 0.5rem;
+		}
